@@ -1,8 +1,10 @@
 [收藏夹]()
-#git使用
+1. git使用
+2. atom
+3. VPS
+4. [markdown](markdown\syntax.md)
 
-#VPS
-##shadowshock
+shadowshock
 
 ```
 wget --no-check-certificate     https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
