@@ -1,9 +1,20 @@
-# 从 URL 输入到页面展现发生了什么
+[收藏夹]()
+#git使用
 
-1.浏览器获取URL，通过DNS服务把URL转换成IP地址
+#VPS
+##shadowshock
 
-2.IP地址对应的webserver获取请求，将请求转到对应的网站目录下
+```
+wget --no-check-certificate     https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
+chmod +x shadowsocksR.sh
+./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+chmod +x bbr.sh
+./bbr.sh
+```
 
-3.浏览器获取该网站的目录结构，默认加载对应的html文件，接着根据内容加载CSS、js等文件。
+返回值有 tcpbbr 即bbr已启动
 
-4.当浏览器解析到body标签后，页面展现
+```
+lsmod | grep bbr
+```
