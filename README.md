@@ -2,7 +2,7 @@
 1. git使用
 2. atom
 3. VPS
-4. [markdown](markdown\syntax.md)
+4. [markdown](markdown\readme.md)
 
 shadowshock
 
