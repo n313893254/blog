@@ -2,7 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
+import styled from 'styled-components'
 import { rhythm } from "../utils/typography"
+
+import loadWebFonts from '../services/web-fonts'
 
 export default class Template extends React.Component {
   static propTypes = {
