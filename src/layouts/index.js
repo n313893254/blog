@@ -7,14 +7,26 @@ import { rhythm } from "../utils/typography"
 
 import loadWebFonts from '../services/web-fonts'
 
+// import Content from '../components/Content'
+
+const Root = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`
+
 export default class Template extends React.Component {
   static propTypes = {
     children: PropTypes.func,
   }
 
+  componentDidMount () {
+    loadWebFonts()
+  }
+
   render() {
     return (
-      <div>
+      <Root>
         <Helmet
           title="Gatsby Default Starter"
           meta={[
@@ -58,7 +70,7 @@ export default class Template extends React.Component {
         >
           {this.props.children()}
         </div>
-      </div>
+      </Root>
     )
   }
 }
