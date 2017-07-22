@@ -8,6 +8,9 @@ import { rhythm } from "../utils/typography"
 import loadWebFonts from '../services/web-fonts'
 
 import Header from '../components/Header'
+import Content from '../components/Content'
+
+import '../css/base.css'
 
 const Root = styled.div`
   display: flex;
@@ -35,42 +38,9 @@ export default class Template extends React.Component {
           ]}
         />
         <Header />
-        <div
-          style={{
-            background: `rebeccapurple`,
-            marginBottom: rhythm(1),
-          }}
-        >
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-            }}
-          >
-            <h1 style={{ margin: 0 }}>
-              <Link
-                to="/"
-                style={{
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >
-                DoubleSheep
-              </Link>
-            </h1>
-          </div>
-        </div>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-            paddingTop: 0,
-          }}
-        >
+        <Content>
           {this.props.children()}
-        </div>
+        </Content>
       </Root>
     )
   }
