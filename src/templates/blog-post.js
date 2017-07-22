@@ -13,7 +13,11 @@ export default function BlogPost({
   return (
     <div>
       <Helmet title={`Double Sheep - ${post.frontmatter.title}`} />
-      <Post/>
+      <Post
+        html={post.html}
+        linkTo={post.frontmatter.link || '/'}
+        title={post.frontmatter.title}
+      />
     </div>
   )
 }
