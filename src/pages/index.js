@@ -4,7 +4,9 @@ import Helmet from "react-helmet"
 
 export default class Index extends React.Component {
   render() {
+    const { data } = this.props
     console.log(this.props)
+    // const { edges: posts } = this.allMarkdownRemark
     return (
       <div>
         <h1>Hi peopleqeqw</h1>
