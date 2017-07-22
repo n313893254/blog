@@ -9,13 +9,20 @@ const getParams = () => {
     return {}
   }
   return window.location.search.replace('?', '')
+    .split('&')
+    .reduce((params, keyValue) => {
+      const [key, value = ''] = keyValue.split('=')
+      if (key && value) {
+        params[key] = value.match(/^\d+$/) ? +value : value
+      }
+      return params
+    }, {})
 }
 
 export default class Index extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    console.log(posts)
     return (
       <div>
         {
@@ -25,7 +32,10 @@ export default class Index extends React.Component {
             })
             .map(({ node: post }) => {
               return (
-                <Preview/>
+                <Preview key={post.id}
+                  html={post.html}
+                  title={post.frontmatter.title}
+                  to={post.frontmatter.path}/>
               )
             })
         }
