@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
+import particlesConfig from '../json/particles-config.json'
+
+import '../css/particles-styles.css'
 import { animateBackground, animateShake } from '../css/animations'
 
 const Header = styled.header`
@@ -75,7 +78,26 @@ const Last = styled.span `
   white-space: nowrap;
 `
 
+const Nowrap = styled.span `
+  white-space: nowrap;
+`
+
 class BlogHeader extends Component {
+  componentDidMount () {
+    if (window) {
+      require.ensure('particles.js', () => {
+        this.Particles = require('particles.js')
+        this.Particles(`blog-header`, particlesConfig)
+      })
+    }
+  }
+
+  componentWillUnmount () {
+    if (this.Particles) {
+      this.Particles.destroy()
+    }
+  }
+
   render () {
     return (
       <Header id="blog-header" {...this.props}>

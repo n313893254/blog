@@ -16,7 +16,7 @@
     "gatsby-remark-smartypants": "^1.0.1",
     "gatsby-source-filesystem": "^1.0.1",
     "gatsby-transformer-remark": "^1.1.0",
-    "particles.js": "^2.0.0",
+    "particles.js": "dschau/particles.js#f421a5bd31efd572842645884c803c0c09d364fe",
     "react-typography": "^0.15.0",
     "styled-components": "^2.1.1",
     "typography": "^0.15.8",
