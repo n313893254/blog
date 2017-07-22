@@ -4,7 +4,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPages } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve(`src/template/blog-post.js`)
+    const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
     resolve(
       graphql(`{
         allMarkdownRemark(limit: 1000) {
@@ -26,7 +26,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             path: node.frontmatter.path,
             component: blogPostTemplate,
             context: {
-              
+
             }
           })
         })
