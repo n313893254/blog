@@ -40,7 +40,7 @@ export default class Template extends React.Component {
                   textDecoration: "none",
                 }}
               >
-                Gatsby
+                DoubleSheep
               </Link>
             </h1>
           </div>
