@@ -7,7 +7,7 @@ import { rhythm } from "../utils/typography"
 
 import loadWebFonts from '../services/web-fonts'
 
-// import Content from '../components/Content'
+import Header from '../components/Header'
 
 const Root = styled.div`
   display: flex;
@@ -34,6 +34,7 @@ export default class Template extends React.Component {
             { name: "keywords", content: "sample, something" },
           ]}
         />
+        <Header />
         <div
           style={{
             background: `rebeccapurple`,

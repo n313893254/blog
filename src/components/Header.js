@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import { animateBackground } from '../css/animations'
+import { animateBackground, animateShake } from '../css/animations'
 
 const Header = styled.header`
   ${animateBackground}
+  ${animateShake}
 `
 
 class BlogHeader extends Component {
   render () {
-    <Header id="blog-header">
-    </Header>
+    return (
+      <Header id="blog-header" {...this.props}>
+        <p>poi</p>
+      </Header>
+    )
   }
 }
+
+export default BlogHeader
