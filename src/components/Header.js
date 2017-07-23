@@ -78,7 +78,7 @@ const Last = styled.span `
   white-space: nowrap;
 `
 
-const Nowrap = styled.span `
+const NoWrap = styled.span `
   white-space: nowrap;
 `
 
