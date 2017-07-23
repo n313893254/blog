@@ -32,7 +32,8 @@ export default class Index extends React.Component {
             })
             .map(({ node: post }) => {
               return (
-                <Preview key={post.id}
+                <Preview
+                  key={post.id}
                   html={post.html}
                   title={post.frontmatter.title}
                   to={post.frontmatter.path}/>

@@ -25,7 +25,8 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "gh-pages": "^0.12.0"
+    "gh-pages": "^0.12.0",
+    "prettier": "^1.5.3"
   },
   "keywords": [
     "gatsby"
