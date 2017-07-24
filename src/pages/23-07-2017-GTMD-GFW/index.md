@@ -16,3 +16,19 @@ export ELECTRON_MIRROR="http://npm.taobao.org/mirrors/electron"
 
 3. `source ~/.bashrc`
 4. 开始你的旅行吧
+
+## Shell
+GitHub发布的二进制包，例如WinCodeSign，使用的亚马逊的服务器。
+
+![你懂的](http://omph2coqc.bkt.clouddn.com/17-7-24/29668969.jpg)
+
+由于是在代码里面访问http，所以只有全局代理能拯救我们了
+
+```
+// 设置代理
+export ALL_PROXY=socks5://127.0.0.1:1080
+// 清除代理
+unset ALL_PROXY
+// 查看ip测试是否生效
+curl -i http://ip.cn
+```
