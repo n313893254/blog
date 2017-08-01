@@ -16,6 +16,10 @@
       "page-component---src-pages-index-js-590d1e604fe5cdc9e4ea.js",
       "page-component---src-pages-index-js-590d1e604fe5cdc9e4ea.js.map"
     ],
+    "path---prettier-html": [
+      "path---prettier-html-470a1971abf4b4f372ae.js",
+      "path---prettier-html-470a1971abf4b4f372ae.js.map"
+    ],
     "path---page-2": [
       "path---page-2-586c7e095e534a3909ec.js",
       "path---page-2-586c7e095e534a3909ec.js.map"
@@ -25,24 +29,16 @@
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
     ],
     "path---index": [
-      "path---index-aa9425194f9bb986a09e.js",
-      "path---index-aa9425194f9bb986a09e.js.map"
-    ],
-    "path---hello-world-two-html": [
-      "path---hello-world-two-html-76b5e92518e9e2dbf771.js",
-      "path---hello-world-two-html-76b5e92518e9e2dbf771.js.map"
-    ],
-    "path---hello-world-html": [
-      "path---hello-world-html-d53dfb80f3172036ec1a.js",
-      "path---hello-world-html-d53dfb80f3172036ec1a.js.map"
+      "path---index-335f29b1efa238f56df8.js",
+      "path---index-335f29b1efa238f56df8.js.map"
     ],
     "path---gtmd-gfw-html": [
       "path---gtmd-gfw-html-ef8a80c15a4cb2398354.js",
       "path---gtmd-gfw-html-ef8a80c15a4cb2398354.js.map"
     ],
     "path---archive": [
-      "path---archive-aa9425194f9bb986a09e.js",
-      "path---archive-aa9425194f9bb986a09e.js.map"
+      "path---archive-335f29b1efa238f56df8.js",
+      "path---archive-335f29b1efa238f56df8.js.map"
     ],
     "path---404": [
       "path---404-586c7e095e534a3909ec.js",
@@ -69,8 +65,8 @@
       "page-component---src-pages-404-js-4620d6405ac6a800e543.js.map"
     ],
     "app": [
-      "app-a460f963261d8e072ee6.js",
-      "app-a460f963261d8e072ee6.js.map"
+      "app-5856937c2cd157b6dd2c.js",
+      "app-5856937c2cd157b6dd2c.js.map"
     ]
   }
 }
