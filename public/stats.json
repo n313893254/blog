@@ -29,16 +29,20 @@
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
     ],
     "path---index": [
-      "path---index-335f29b1efa238f56df8.js",
-      "path---index-335f29b1efa238f56df8.js.map"
+      "path---index-5bef3becd8004b7d39b2.js",
+      "path---index-5bef3becd8004b7d39b2.js.map"
     ],
     "path---gtmd-gfw-html": [
       "path---gtmd-gfw-html-ef8a80c15a4cb2398354.js",
       "path---gtmd-gfw-html-ef8a80c15a4cb2398354.js.map"
     ],
+    "path---electron-html": [
+      "path---electron-html-595def888e6ea65a962c.js",
+      "path---electron-html-595def888e6ea65a962c.js.map"
+    ],
     "path---archive": [
-      "path---archive-335f29b1efa238f56df8.js",
-      "path---archive-335f29b1efa238f56df8.js.map"
+      "path---archive-5bef3becd8004b7d39b2.js",
+      "path---archive-5bef3becd8004b7d39b2.js.map"
     ],
     "path---404": [
       "path---404-586c7e095e534a3909ec.js",
@@ -65,8 +69,8 @@
       "page-component---src-pages-404-js-4620d6405ac6a800e543.js.map"
     ],
     "app": [
-      "app-5856937c2cd157b6dd2c.js",
-      "app-5856937c2cd157b6dd2c.js.map"
+      "app-8c6e26542c1f039b3c05.js",
+      "app-8c6e26542c1f039b3c05.js.map"
     ]
   }
 }
