@@ -16,9 +16,13 @@
       "page-component---src-pages-index-js-590d1e604fe5cdc9e4ea.js",
       "page-component---src-pages-index-js-590d1e604fe5cdc9e4ea.js.map"
     ],
+    "path---type-script-html": [
+      "path---type-script-html-3de0b1b81d7a09c27cd1.js",
+      "path---type-script-html-3de0b1b81d7a09c27cd1.js.map"
+    ],
     "path---react-book-html": [
-      "path---react-book-html-63e96da30b4e506a9ee8.js",
-      "path---react-book-html-63e96da30b4e506a9ee8.js.map"
+      "path---react-book-html-ad4af0339bfffd5d2dbc.js",
+      "path---react-book-html-ad4af0339bfffd5d2dbc.js.map"
     ],
     "path---prettier-html": [
       "path---prettier-html-9967a8de7a118a85afc2.js",
@@ -37,8 +41,8 @@
       "path---interview-html-0da23fa5866c701d3f5a.js.map"
     ],
     "path---index": [
-      "path---index-27067e06b92563a12e17.js",
-      "path---index-27067e06b92563a12e17.js.map"
+      "path---index-a318d75ace3d189ab154.js",
+      "path---index-a318d75ace3d189ab154.js.map"
     ],
     "path---http-html": [
       "path---http-html-5a0663aca6acac71ba7d.js",
@@ -53,8 +57,8 @@
       "path---electron-html-4d9603cc95c976673ef8.js.map"
     ],
     "path---archive": [
-      "path---archive-27067e06b92563a12e17.js",
-      "path---archive-27067e06b92563a12e17.js.map"
+      "path---archive-a318d75ace3d189ab154.js",
+      "path---archive-a318d75ace3d189ab154.js.map"
     ],
     "path---404": [
       "path---404-586c7e095e534a3909ec.js",
@@ -81,8 +85,8 @@
       "page-component---src-pages-404-js-4620d6405ac6a800e543.js.map"
     ],
     "app": [
-      "app-28d1099306e60c4f3472.js",
-      "app-28d1099306e60c4f3472.js.map"
+      "app-fe4537686d06411b57ca.js",
+      "app-fe4537686d06411b57ca.js.map"
     ]
   }
 }
