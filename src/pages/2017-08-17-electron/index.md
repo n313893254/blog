@@ -36,3 +36,12 @@ win.loadURL(url.format({
 对于简单的页面完全可以，但是当你打算使用Vue或react框架开发时是不是就感觉脑壳疼了
 
 ![](http://omph2coqc.bkt.clouddn.com/17-8-17/1207770.jpg)
+
+## 4. 使用electron-vue脚手架
+> https://github.com/SimulatedGREG/electron-vue
+
+根据文档进行初始化
+
+好多细节太久忘记了，以后碰到再更新把
+
+continue...
