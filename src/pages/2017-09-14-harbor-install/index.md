@@ -1,5 +1,5 @@
 ---
-path: "/rancher-install.html"
+path: "/harbor-install.html"
 date: "2017-09-14T22:12:03.284Z"
 title: "harbor install"
 tags: ["hello", "world"]
