@@ -46,7 +46,13 @@ $ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
 
-## 1.2 Rancher HA 环境部署
+## 1.2 Rancher 部署
+
+```
+sudo docker run -d --restart=unless-stopped -p 8080:8080 registry.cn-hangzhou.aliyuncs.com/ranchers/server:v1.6.5
+```
+
+## 1.3 Rancher HA 环境部署
 ```
 CREATE DATABASE IF NOT EXISTS cattle COLLATE = 'utf8_general_ci' CHARACTER SET = 'utf8';
 GRANT ALL ON cattle.* TO 'cattle'@'%' IDENTIFIED BY 'cattle';
