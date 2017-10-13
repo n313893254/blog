@@ -53,8 +53,31 @@ sudo docker run -d --restart=unless-stopped -p 8080:8080 registry.cn-hangzhou.al
 ```
 
 ## 1.3 Rancher HA 环境部署
+
+### 1.3.1 安装数据库
+
 ```
-CREATE DATABASE IF NOT EXISTS cattle COLLATE = 'utf8_general_ci' CHARACTER SET = 'utf8';
-GRANT ALL ON cattle.* TO 'cattle'@'%' IDENTIFIED BY 'cattle';
-GRANT ALL ON cattle.* TO 'cattle'@'localhost' IDENTIFIED BY 'cattle';
+yum install -y mariadb
+yum install -y mariadb-server
+chkconfig mariadb on
+service mariadb start
+mysql_secure_installation
+mysql -u root -p
+```
+
+### 1.3.1 创建数据库
+
+```sql
+> CREATE DATABASE IF NOT EXISTS cattle COLLATE = 'utf8_general_ci' CHARACTER SET = 'utf8';
+> GRANT ALL ON cattle.* TO 'cattle'@'%' IDENTIFIED BY 'cattle';
+> GRANT ALL ON cattle.* TO 'cattle'@'localhost' IDENTIFIED BY 'cattle';
+```
+
+### 1.3.2 部署rancher server
+在另外两台host上部署
+
+```
+docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 rancher/server \
+     --db-host myhost.example.com --db-port 3306 --db-user username --db-pass password --db-name cattle \
+     --advertise-address <IP_of_the_Node>
 ```
