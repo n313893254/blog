@@ -1,5 +1,5 @@
 ---
-path: "/K8S.html"
+path: "/atom-plugin.html"
 date: "2017-10-15T22:12:03.284Z"
 title: "有趣的ATOM插件"
 tags: ["hello", "world"]
