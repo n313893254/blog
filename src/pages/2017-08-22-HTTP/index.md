@@ -1,7 +1,7 @@
 ---
 path: "/HTTP.html"
 date: "2017-08-18T22:12:03.284Z"
-title: "图解HTTP读书笔记"
+title: "《图解HTTP》读书笔记"
 tags: ["hello", "world"]
 ---
 # 为什么读这本书
