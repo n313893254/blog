@@ -24,6 +24,10 @@
       "path---react-book-html-ad4af0339bfffd5d2dbc.js",
       "path---react-book-html-ad4af0339bfffd5d2dbc.js.map"
     ],
+    "path---rancher-install-html": [
+      "path---rancher-install-html-5c9719ed6798e8c0b6c1.js",
+      "path---rancher-install-html-5c9719ed6798e8c0b6c1.js.map"
+    ],
     "path---prettier-html": [
       "path---prettier-html-9967a8de7a118a85afc2.js",
       "path---prettier-html-9967a8de7a118a85afc2.js.map"
@@ -41,8 +45,8 @@
       "path---interview-html-0da23fa5866c701d3f5a.js.map"
     ],
     "path---index": [
-      "path---index-a318d75ace3d189ab154.js",
-      "path---index-a318d75ace3d189ab154.js.map"
+      "path---index-7941a97edaf106d2674f.js",
+      "path---index-7941a97edaf106d2674f.js.map"
     ],
     "path---http-html": [
       "path---http-html-5a0663aca6acac71ba7d.js",
@@ -53,12 +57,12 @@
       "path---gtmd-gfw-html-910825d0ff6f9d27dd90.js.map"
     ],
     "path---electron-html": [
-      "path---electron-html-4d9603cc95c976673ef8.js",
-      "path---electron-html-4d9603cc95c976673ef8.js.map"
+      "path---electron-html-e7b831f3761d5a362ca3.js",
+      "path---electron-html-e7b831f3761d5a362ca3.js.map"
     ],
     "path---archive": [
-      "path---archive-a318d75ace3d189ab154.js",
-      "path---archive-a318d75ace3d189ab154.js.map"
+      "path---archive-7941a97edaf106d2674f.js",
+      "path---archive-7941a97edaf106d2674f.js.map"
     ],
     "path---404": [
       "path---404-586c7e095e534a3909ec.js",
@@ -85,8 +89,8 @@
       "page-component---src-pages-404-js-4620d6405ac6a800e543.js.map"
     ],
     "app": [
-      "app-fe4537686d06411b57ca.js",
-      "app-fe4537686d06411b57ca.js.map"
+      "app-47489181a8783937edbc.js",
+      "app-47489181a8783937edbc.js.map"
     ]
   }
 }
