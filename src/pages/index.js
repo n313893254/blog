@@ -1,67 +1,67 @@
-import React from "react"
-import Link from "gatsby-link"
-import Helmet from "react-helmet"
+import React from 'react'
+import Link from 'gatsby-link'
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
-import Preview from '../components/Preview'
+import Bio from '../components/Bio'
+import { rhythm } from '../utils/typography'
 
-const getParams = () => {
-  if (!window || !window.location) {
-    return {}
-  }
-  return window.location.search.replace('?', '')
-    .split('&')
-    .reduce((params, keyValue) => {
-      const [key, value = ''] = keyValue.split('=')
-      if (key && value) {
-        params[key] = value.match(/^\d+$/) ? +value : value
-      }
-      return params
-    }, {})
-}
-
-export default class Index extends React.Component {
+class BlogIndex extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+
     return (
       <div>
-        {
-          posts
-            .filter(post => {
-              return post.node.frontmatter.title.length > 0
-            })
-            .map(({ node: post }) => {
-              return (
-                <Preview
-                  key={post.id}
-                  html={post.html}
-                  title={post.frontmatter.title}
-                  to={post.frontmatter.path}/>
-              )
-            })
-        }
+        <Helmet title={siteTitle} />
+        <Bio />
+        {posts.map(post => {
+          if (post.node.frontmatter.path !== '/404/') {
+            const title = get(post, 'node.frontmatter.title') || post.node.path
+            return (
+              <div key={post.node.frontmatter.path}>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link
+                    style={{ boxShadow: 'none' }}
+                    to={post.node.frontmatter.path}
+                  >
+                    {title}
+                  </Link>
+                </h3>
+                <small>{post.node.frontmatter.date}</small>
+                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+              </div>
+            )
+          }
+        })}
       </div>
     )
   }
 }
+
+export default BlogIndex
 
 export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
         title
-        author
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          html
-          id
+          excerpt
+          frontmatter {
+            path
+            date(formatString: "DD MMMM, YYYY")
+          }
           frontmatter {
             title
-            date
-            path
           }
         }
       }
