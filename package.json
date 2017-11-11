@@ -27,6 +27,8 @@
     "react-responsive-grid": "^0.3.3",
     "typeface-merriweather": "^0.0.35",
     "typeface-montserrat": "^0.0.37",
+    "typeface-space-mono": "0.0.43",
+    "typeface-spectral": "0.0.43",
     "typography-theme-wordpress-2016": "^0.15.1"
   },
   "devDependencies": {

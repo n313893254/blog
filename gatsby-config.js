@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter Blog",
-    author: "Kyle Mathews",
+    title: "DoubleSheep Blog",
+    author: "DoubleSheep",
   },
   plugins: [
     {
@@ -50,4 +50,5 @@ module.exports = {
       },
     },
   ],
+  pathPrefix: 'http://localhost:5000'
 }
