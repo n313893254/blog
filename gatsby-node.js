@@ -1,12 +1,14 @@
 const _ = require("lodash")
-const Promise = require('bluebird')
+// const Promise = require('bluebird')
 const path = require('path')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve("./src/templates/blog-post.js")
+  const pages = []
+  const blogPost = path.resolve("./src/templates/blog-post.js")
+  const tagPage = path.resolve("./src/templates/tag.js")
     resolve(
       graphql(
         `
