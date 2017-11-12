@@ -12,14 +12,41 @@ import { rhythm, scale } from '../utils/typography'
 require('prismjs/themes/prism-solarizedlight.css')
 
 injectGlobal`
-  ul, ol {
-    list-style-type: none;
-  }
-  a {
-    background: transparent;
-    text-decoration: none;
-    color: #08c;
-  }
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #eaeaea;
+  color: #1a1a1a;
+  font-family: lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+ul, ol {
+  list-style-type: none;
+}
+dd, dl, li, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  color: #08c;
+  box-shadow: none;
+}
+* {
+  box-sizing: border-box;
+}
 `
 
 class Template extends React.Component {
@@ -82,11 +109,10 @@ class Template extends React.Component {
         </MediaQuery>
         <Container
           style={{
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            maxWidth: '75%',
             position: 'absolute',
             right: '0',
-            'min-height': '100%',
+            minHeight: '100%',
             background:'#eaeaea',
             width: 'auto'
           }}
