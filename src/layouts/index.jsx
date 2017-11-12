@@ -1,8 +1,26 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled, { injectGlobal } from 'styled-components'
 import { Container } from 'react-responsive-grid'
 
+import MediaQuery from 'react-responsive'
+
+import SideBar from '../components/LeftCol'
+
 import { rhythm, scale } from '../utils/typography'
+
+require('prismjs/themes/prism-solarizedlight.css')
+
+injectGlobal`
+  ul, ol {
+    list-style-type: none;
+  }
+  a {
+    background: transparent;
+    text-decoration: none;
+    color: #08c;
+  }
+`
 
 class Template extends React.Component {
   render() {
@@ -58,15 +76,25 @@ class Template extends React.Component {
       )
     }
     return (
-      <Container
-        style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children()}
-      </Container>
+      <div>
+        <MediaQuery query="(min-width: 800px)">
+          <SideBar showMiddle={this.showMiddleHandler}></SideBar>
+        </MediaQuery>
+        <Container
+          style={{
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            position: 'absolute',
+            right: '0',
+            'min-height': '100%',
+            background:'#eaeaea',
+            width: 'auto'
+          }}
+        >
+          {header}
+          {children()}
+        </Container>
+      </div>
     )
   }
 }
