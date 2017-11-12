@@ -51,5 +51,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: 'http://localhost:5000'
+  // pathPrefix: 'http://localhost:5000'
 }
