@@ -1,6 +1,6 @@
 ---
 path: "/bash.html"
-date: "2017-10-15T22:12:03.284Z"
+date: "2017-11-14T22:12:03.284Z"
 title: "Bash 操作"
 tags: ["bash"]
 ---
