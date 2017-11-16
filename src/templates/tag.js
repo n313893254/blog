@@ -1,15 +1,13 @@
-import React from "react"
-import Link from "gatsby-link"
+import React from 'react'
+import Link from 'gatsby-link'
 
 class TagRoute extends React.Component {
-  render () {
+  render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    const postLinks = posts.map(post =>
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          {post.node.frontmatter.title}
-        </Link>
+    const postLinks = posts.map(({ node }) => (
+      <li key={node.fields.slug}>
+        <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
       </li>
-    )
+    ))
   }
 }

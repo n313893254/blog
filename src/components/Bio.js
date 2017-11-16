@@ -17,7 +17,9 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={'https://avatars2.githubusercontent.com/u/18737885?s=400&u=51c729c1f22c4846e7e75401af72fe9cab506510&v=4'}
+          src={
+            'https://avatars2.githubusercontent.com/u/18737885?s=400&u=51c729c1f22c4846e7e75401af72fe9cab506510&v=4'
+          }
           alt={`DoubleSheep`}
           style={{
             marginRight: rhythm(1 / 2),
@@ -27,7 +29,8 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>DoubleSheep</strong> who lives and works in ShenZen building useful things.{' '}
+          Written by <strong>DoubleSheep</strong> who lives and works in ShenZen
+          building useful things.{' '}
           <a href="https://twitter.com/n313893254">
             You should follow him on Twitter
           </a>
