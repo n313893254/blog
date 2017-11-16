@@ -34,7 +34,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.22.3/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```
-
+`minikube start`
 之后用`kubectl -n kube-system get po`以确认安装是否成功
 
 ## 5. 安装helm
