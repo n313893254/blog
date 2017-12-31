@@ -50,6 +50,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-antd',
+    'gatsby-plugin-less',
   ],
   pathPrefix: 'http://localhost:5000'
 }

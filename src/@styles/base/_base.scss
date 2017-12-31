@@ -1,0 +1,159 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  min-width: 1280px;
+  background-color: $light-grey;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/**
+ * Basic styles for links
+ */
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+pre {
+  background-color: $dark-grey;
+
+  code {
+    color: $light-grey;
+  }
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba($mid-grey, 0.3);
+    margin: 20px 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+// Text indent, margins, and paddings from 5-50px in 5px increments
+// v stands for vertical & h stands for horizontal
+// e.g. in-10 - {text-indent: 10px}
+// e.g. p-10 - {padding: 10px}
+// e.g. mt-20 - {margin-top: 20px}
+// e.g. mv-30 - {margin-top: 30px; margin-bottom: 30px;}
+$spacing-property-map: (
+    m:  margin,
+    mt: margin-top,
+    mr: margin-right,
+    ml: margin-left,
+    mb: margin-bottom,
+    p:  padding,
+    pt: padding-top,
+    pb: padding-bottom,
+    pl: padding-left,
+    pr: padding-right,
+    in: text-indent,
+);
+
+@each $keyword, $property in $spacing-property-map {
+  .#{$keyword}-0 { #{$property}: 0 !important; }
+
+  @for $size from 1 through 100 {
+    $val: $size * 1;
+    .#{$keyword}-#{$val} { #{$property}: $val * 1px !important; }
+  }
+}
+
+.mh-0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.mv-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.ph-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.pv-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+@for $size from 1 through 100 {
+  $val: $size * 1;
+  .mh-#{$val} {
+    margin-left: $val * 1px !important;
+    margin-right: $val * 1px !important;
+  }
+  .mv-#{$val} {
+    margin-top: $val * 1px !important;
+    margin-bottom: $val * 1px !important;
+  }
+  .ph-#{$val} {
+    padding-left: $val * 1px !important;
+    padding-right: $val * 1px !important;
+  }
+  .pv-#{$val} {
+    padding-top: $val * 1px !important;
+    padding-bottom: $val * 1px !important;
+  }
+}
+
+.f-xs {
+  font-size: 10px;
+}
+
+.f-sm {
+  font-size: 12px;
+}
+
+.f-md {
+  font-size: 14px;
+}
+
+.f-lg {
+  font-size: 16px;
+}
+
+.f-xlg {
+  font-size: 18px;
+}
+
+@for $size from 8 through 20 {
+  $val: $size * 2;
+  .f-#{$val} {
+    font-size: $val * 1px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}

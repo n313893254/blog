@@ -1,0 +1,197 @@
+.text-default {
+  color: $text-color;
+}
+
+.text-disabled {
+  color: $primary;
+}
+
+.text-muted {
+  color: $mid-grey;
+
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+
+}
+
+.text-success {
+  color: #27ae60;
+}
+
+.text-info {
+  color: $info;
+}
+
+.text-link {
+  color: $link-color;
+}
+
+.text-warning {
+  color: $warning;
+}
+
+.text-danger {
+  color: #f15354;
+}
+
+.text-error {
+  color: $error;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-white-input {
+    background: white  !important;
+    &:hover,
+    &:focus {
+      background: white  !important;
+    }
+}
+
+.bg-default {
+  @include bg-color($light-grey);
+  @include contrasted($light-grey);
+}
+
+.bg-disabled {
+  background-color: $mid-grey;
+  color: $dark-grey;
+}
+
+.bg-mid-light-grey {
+  @include bg-color($mid-light-grey);
+  @include contrasted($mid-light-grey);
+}
+
+.bg-grey {
+  background-color: $mid-grey !important;
+  color: $white !important;
+}
+
+.bg-dark {
+  background-color: $dark-grey !important;
+  color: $mid-grey !important;
+}
+
+.bg-primary {
+  @include bg-color($primary);
+  @include contrasted($primary);
+
+  &:hover {
+    color: white;
+  }
+}
+.bg-secondary {
+  @include bg-color($secondary);
+  @include contrasted($secondary);
+}
+.bg-success {
+  @include bg-color($success);
+  @include contrasted($success);
+}
+.bg-info {
+  @include bg-color($info);
+  @include contrasted($info);
+}
+.bg-warning {
+  @include bg-color($warning);
+  @include contrasted($warning);
+}
+.bg-error {
+  @include bg-color($error);
+  @include contrasted($error);
+}
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-white-btn {
+  @include bg-color(white);
+  @include contrasted(white);
+
+  &:hover {
+    color: black;
+  }
+}
+
+.bg-transparent {
+    color: $primary;
+}
+
+.bg-dark-primary {
+  background-color: darken($primary,7%);;
+}
+
+.bg-darken {
+  background-color: rgba(0,0,0, .15);
+}
+
+.border-default {
+  border: solid 1px $text-color;
+}
+
+
+.border-none {
+  border: none !important;
+}
+
+.border-muted {
+  border: solid 1px $light-grey;
+}
+
+.border-primary {
+  border: solid 1px $primary;
+}
+
+.border-secondary {
+  border: solid 1px $secondary;
+}
+
+.border-success {
+  border: solid 1px $success;
+}
+
+.border-info {
+  border: solid 1px $info;
+}
+
+.border-warning {
+  border: solid 1px $warning;
+}
+
+.border-error {
+  border: solid 1px $error;
+}
+
+$border-property-map: (
+  b:  border,
+  bt: border-top,
+  br: border-right,
+  bl: border-left,
+  bb: border-bottom,
+);
+
+@each $keyword, $property in $border-property-map {
+  .#{$keyword}-0 {
+    #{$property}: 0 solid #000 !important;
+  }
+
+  @for $size from 1 through 4 {
+    $val: $size * 1;
+    .#{$keyword}-#{$val} {
+      #{$property}: $val * 1px solid $input-border !important;
+    }
+  }
+}

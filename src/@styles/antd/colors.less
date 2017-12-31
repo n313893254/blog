@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+
+/// Theme colors
+@primary: #d71819;
+@secondary: #34495E;
+
+@primary-mid: lighten(@primary, .8);
+@primary-light: lighten(@primary, .5);
+@white: white;
+
+//greys
+@dark-grey: #3d4750;
+@mid-dark-grey: #58636e;
+@mid-grey: #8b9dae;
+@mid-light-grey: #cdd5dc;
+@light-grey: #eff3f4;
+@asean-grey: #f2f2f4;
+
+//Contrast colors
+@contrasted-dark-default: @dark-grey !default;
+@contrasted-light-default: white !default;
+
+//blue
+@blue: #57a8e9;
+@light-blue: #bce4fe;
+
+//green success
+@green: #9cbc71;
+@light-green: #acd373;
+
+///State colors
+@success: @green;
+@warning: #e5c34a;
+@error: @primary-light;
+@info:  @light-blue;
+
+@green                 : #27ae60;
+@blueDark              : #00558b;
+@yellowDark            : #e49701;
+@teal                  : #3a6f81;
+@yellow                : #f1c40f;
+
+
+//buttons and links
+@link-color: @blue;
+@link-hover: @light-blue;
+@btn-main: @primary;
+
+
+/// Copy text color
+/// @type Color
+@text-color: @dark-grey;
+
+/// Light grey
+/// @type Color
+@light-grey: #ecf0f1;
+
+/// Medium grey
+/// @type Color
+@mid-grey: #99a3a8;
+
+/// Dark grey
+/// @type Color
+@dark-grey: #3d3d3d;
+
+/// Main brand color
+/// @type Color
+@brand-color: @primary;
+@brand-accent: @light-grey;
+
+/// Container's maximum width
+/// @type Length
+@max-width: 1100px;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+@breakpoints: (
+  'extra-small': 320px,
+  'small': 640px,
+  'medium': 768px,
+  'large': 960px, // =1920/2, the-one-true-resolution
+);
+
+//typography
+@font-stack: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+//inputs
+@input-bg: @light-grey;
+@input-border: @mid-light-grey;
+@input-bg-hover: @mid-light-grey;
+@input-border-hover: @mid-grey;
+@input-bg-focus: @light-blue;
+@input-border-focus: @blue;
+
+//tables
+@table-head: @mid-light-grey;
+@table-even-row: @light-grey;
+@table-row-hover: #fff5d2;
+
+@sidebar-bg: #59636d;
+@sidebar-dropdown: @dark-grey;

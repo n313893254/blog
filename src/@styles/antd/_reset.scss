@@ -1,0 +1,78 @@
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px white!important;
+}
+// reset ant border-radius
+.ant-modal-header,
+.ant-modal-footer {
+  border: 0;
+}
+.ant-modal-title,
+.ant-modal-footer {
+  text-align: center;
+}
+.ant-confirm-btns {
+  text-align: center;
+  float: none!important;
+  margin-bottom: -10px;
+}
+.ant-confirm-body {
+  .ant-confirm-title {
+    display: block;
+    text-align: center;
+    margin-top: -15px;
+  }
+}
+// disable table tr hover color
+.ant-table-thead > tr,
+.ant-table-tbody > tr {
+  transition: all .3s;
+  &.ant-table-row-hover,
+  &:hover {
+    & > td {
+      background: none;
+    }
+  }
+}
+.ant-tabs-bar {
+  border-bottom: none;
+}
+&-thead > tr:hover {
+  background: none;
+}
+
+.ant-menu-root {
+  > .ant-menu-submenu,
+  > .ant-menu-item {
+    border-bottom: 1px solid $dark-grey;
+    a {
+      color: inherit;
+    }
+  }
+  .ant-menu-item-selected {
+    background: white!important;
+    i, a, span {
+      color: $primary;
+    }
+    border-left: 4px solid $primary;
+  }
+}
+
+.ant-input:focus {
+    border-color: #57a8e9;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 2px rgba(87,168,233, .2);
+    box-shadow: 0 0 0 2px rgba(87,168,233, .2);
+}
+
+.td, th {
+  &.text-center {
+    text-align: center!important;
+  }
+}
+
+.hideHeader {
+  thead {
+    display: none!important;
+  }
+}
+

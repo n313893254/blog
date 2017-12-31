@@ -1,8 +1,12 @@
 import React from 'react'
+import '../@styles/antd/antd.less'
 import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
+import { Layout } from 'antd'
 
 import { rhythm, scale } from '../utils/typography'
+
+const { Header, Footer, Sider, Content } = Layout;
 
 class Template extends React.Component {
   render() {
@@ -58,15 +62,23 @@ class Template extends React.Component {
       )
     }
     return (
-      <Container
-        style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children()}
-      </Container>
+      <Layout>
+        <Header>{header}</Header>
+        <Layout>
+          {/* <Sider>Sider</Sider> */}
+          <Content>
+            <Container
+              style={{
+                maxWidth: rhythm(24),
+                padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+              }}
+            >
+              {children()}
+            </Container>
+          </Content>
+        </Layout>
+      </Layout>
+
     )
   }
 }
