@@ -49,6 +49,7 @@ module.exports = {
         pathToConfigModule: "src/utils/typography",
       },
     },
+    'gatsby-plugin-antd',
   ],
   pathPrefix: 'http://localhost:5000'
 }
