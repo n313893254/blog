@@ -14,7 +14,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={siteTitle} />
-        <Bio />
+        {/* <Bio /> */}
         {posts.map(post => {
           if (post.node.frontmatter.path !== '/404/') {
             const title = get(post, 'node.frontmatter.title') || post.node.path

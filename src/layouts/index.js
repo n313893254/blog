@@ -19,54 +19,35 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
+    header = (
+      <div>
+        <Link
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
+            boxShadow: 'none',
+            textDecoration: 'none',
+            color: 'inherit',
           }}
+          to={'/'}
         >
-          <Link
+          <img
+            src={'https://avatars2.githubusercontent.com/u/18737885?s=400&u=51c729c1f22c4846e7e75401af72fe9cab506510&v=4'}
+            alt={`DoubleSheep`}
             style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              width: rhythm(2),
+              height: rhythm(2),
             }}
-            to={'/'}
-          >
-            DoubleSheep Blog
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            DoubleSheep Blog
-          </Link>
-        </h3>
-      )
-    }
+          />
+          DoubleSheep Blog
+        </Link>
+      </div>
+    )
     return (
       <Layout>
         <Header>{header}</Header>
         <Layout>
-          {/* <Sider>Sider</Sider> */}
+          <Sider>Sider</Sider>
           <Content>
             <Container
               style={{
