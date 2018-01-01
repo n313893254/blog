@@ -1,7 +1,7 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import '../@styles/antd/antd.less'
 import '../@styles/global.scss'
-import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
 import { Layout } from 'antd'
 import SideMenu from '../SideMenu'
