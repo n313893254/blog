@@ -2,8 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
-import { rhythm, scale } from '../utils/typography'
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -12,7 +10,9 @@ class BlogPostTemplate extends React.Component {
     return (
       <div>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: post.html }}
+             className="markdown"
+        />
       </div>
     )
   }

@@ -6,8 +6,6 @@ import { Container } from 'react-responsive-grid'
 import { Layout } from 'antd'
 import SideMenu from '../SideMenu'
 
-import { rhythm, scale } from '../utils/typography'
-
 const { Header, Footer, Sider, Content } = Layout;
 
 class Template extends React.Component {
@@ -47,10 +45,6 @@ class Template extends React.Component {
           </Sider> */}
           <Content>
             <Container
-              style={{
-                maxWidth: rhythm(24),
-                padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-              }}
             >
               {children()}
             </Container>

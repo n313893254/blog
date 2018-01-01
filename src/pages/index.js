@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import { rhythm } from '../utils/typography'
 import { Card, Pagination } from 'antd'
 
 class BlogIndex extends React.Component {
