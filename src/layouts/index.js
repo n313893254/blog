@@ -35,7 +35,7 @@ class Template extends React.Component {
     )
     return (
       <Layout>
-        <Sider style={{overflow: 'auto', height: '100vh', position: 'fixed', left: 0}}>
+        <Sider style={{overflow: 'auto', height: '100vh', position: 'fixed', left: 0, background: '#001529'}}>
           <SideMenu></SideMenu>
         </Sider>
         <Layout style={{marginLeft: 200}}>
