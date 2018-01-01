@@ -7,6 +7,9 @@ import { rhythm } from '../utils/typography'
 import { Card, Pagination } from 'antd'
 
 class BlogIndex extends React.Component {
+  state = {
+    current: 1,
+  }
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     let posts = get(this, 'props.data.allMarkdownRemark.edges')
@@ -14,7 +17,7 @@ class BlogIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         {/* <Bio /> */}
-        {posts.map(post => {
+        {posts.slice((this.state.current - 1) * 10, this.state.current * 10).map(post => {
           if (post.node.frontmatter.path !== '/404/') {
             const title = get(post, 'node.frontmatter.title') || post.node.path
             const titleLink = (
@@ -38,8 +41,9 @@ class BlogIndex extends React.Component {
           }
         })}
         <Pagination className="text-center mt-40"
-                    defaultCurrent={1}
+                    current={this.state.current}
                     total={posts.length}
+                    onChange={current => this.setState({current})}
         ></Pagination>
       </div>
     )
