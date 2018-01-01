@@ -1,0 +1,38 @@
+@import "../@styles/asean";
+
+.menu {
+  i {
+    transform: scale(1.5);
+  }
+}
+
+$ratio: 2134 / 834;
+$width: 140px;
+
+.side-logo {
+  box-shadow: 1px 0 4px $sidebar-bg;
+  height: 60px!important;
+  position: relative;
+}
+
+.collapsed {
+  background: url(/images/logos/logo.png) no-repeat center center!important;
+  background-size: 50px 50px!important;
+}
+
+:global {
+  .side-menu {
+    .ant-menu-item[role=menuitem] {
+      position: relative;
+    }
+  }
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  opacity: 0;
+}

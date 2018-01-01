@@ -5,6 +5,7 @@ import '../@styles/global.scss'
 import { Container } from 'react-responsive-grid'
 import { Layout } from 'antd'
 import SideMenu from '../SideMenu'
+import styles from './styles.scss'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -28,22 +29,18 @@ class Template extends React.Component {
           }}
           to={'/'}
         >
-          {/* <Avatar size="large"
-                  // className="text-center mt-40"
-                  src="https://avatars2.githubusercontent.com/u/18737885?s=400&u=51c729c1f22c4846e7e75401af72fe9cab506510&v=4"
-          /> */}
           DoubleSheep
         </Link>
       </div>
     )
     return (
       <Layout>
-        {/* <Header>{header}</Header> */}
-        <Layout>
-          {/* <Sider>
-            <SideMenu></SideMenu>
-          </Sider> */}
-          <Content>
+        <Sider style={{overflow: 'auto', height: '100vh', position: 'fixed', left: 0}}>
+          <SideMenu></SideMenu>
+        </Sider>
+        <Layout style={{marginLeft: 200}}>
+          <Header style={{background: '#fff'}}>{header}</Header>
+          <Content style={{padding: '20px 20px'}}>
             {children()}
           </Content>
         </Layout>
