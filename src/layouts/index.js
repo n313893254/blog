@@ -44,10 +44,7 @@ class Template extends React.Component {
             <SideMenu></SideMenu>
           </Sider> */}
           <Content>
-            <Container
-            >
-              {children()}
-            </Container>
+            {children()}
           </Content>
         </Layout>
       </Layout>

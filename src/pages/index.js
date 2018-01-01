@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import { Card, Pagination } from 'antd'
+import { Card, Pagination, Row, Col } from 'antd'
 
 class BlogIndex extends React.Component {
   state = {
@@ -13,38 +13,41 @@ class BlogIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     let posts = get(this, 'props.data.allMarkdownRemark.edges')
     return (
-      <div>
-        <Helmet title={siteTitle} />
-        {/* <Bio /> */}
-        {posts.slice((this.state.current - 1) * 10, this.state.current * 10).map(post => {
-          if (post.node.frontmatter.path !== '/404/') {
-            const title = get(post, 'node.frontmatter.title') || post.node.path
-            const titleLink = (
-              <Link
-                style={{ boxShadow: 'none' }}
-                to={post.node.frontmatter.path}
-              >
-                {title}
+      <main>
+        <Row>
+          <Col span={20} offset={2}>
+            <Helmet title={siteTitle} />
+            {posts.slice((this.state.current - 1) * 10, this.state.current * 10).map(post => {
+              if (post.node.frontmatter.path !== '/404/') {
+                const title = get(post, 'node.frontmatter.title') || post.node.path
+                const titleLink = (
+                  <Link
+                    style={{ boxShadow: 'none' }}
+                    to={post.node.frontmatter.path}
+                  >
+                    {title}
 
-              </Link>
-            )
-            return (
-              <Card className="mt-10"
-                    title={titleLink}
-                    key={post.node.frontmatter.path}
-              >
-                <small>{post.node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </Card>
-            )
-          }
-        })}
-        <Pagination className="text-center mt-40"
-                    current={this.state.current}
-                    total={posts.length}
-                    onChange={current => this.setState({current})}
-        ></Pagination>
-      </div>
+                  </Link>
+                )
+                return (
+                  <Card className="mt-10"
+                        title={titleLink}
+                        key={post.node.frontmatter.path}
+                  >
+                    <small>{post.node.frontmatter.date}</small>
+                    <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                  </Card>
+                )
+              }
+            })}
+            <Pagination className="text-center mt-40"
+                        current={this.state.current}
+                        total={posts.length}
+                        onChange={current => this.setState({current})}
+            ></Pagination>
+          </Col>
+        </Row>
+      </main>
     )
   }
 }
