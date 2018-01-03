@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { Avatar, Row, Col, Menu } from 'antd'
 import styles from './styles.scss'
 
@@ -25,9 +26,11 @@ export default class C extends React.Component {
           </MenuItem>
           <MenuItem className="mt-0 mb-0"
           >
-            <span>
-              博客
-            </span>
+            <Link to={'/'}>
+              <span>
+                博客
+              </span>
+            </Link>
           </MenuItem>
           <MenuItem className="mt-0 mb-0"
           >
