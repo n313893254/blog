@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import {navigateTo} from 'gatsby-link'
 import { Avatar, Row, Col, Menu } from 'antd'
 import styles from './styles.scss'
 
@@ -26,11 +26,11 @@ export default class C extends React.Component {
           </MenuItem>
           <MenuItem className="mt-0 mb-0"
           >
-            <Link to={'/'}>
+            <div onClick={ () => navigateTo('/')}>
               <span>
                 博客
               </span>
-            </Link>
+            </div>
           </MenuItem>
           <MenuItem className="mt-0 mb-0"
           >
