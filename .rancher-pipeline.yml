@@ -1,9 +1,10 @@
 notification:
   recipients:
-    - notifier: notifier-a
-      recipient: "#channel-abc"
-    - notifier: notifier-a
-      recipient: "@somebody"
-    - notifier: notifier-b #using default recipient of the notifier
+  - recipient: '#channel-abc'
+    notifier: notifier-a
+  - recipient: '@somebody'
+    notifier: notifier-a
+  - recipient: ""
+    notifier: notifier-b
+  message: xxx
   condition: Failed
-  message: "xxx"
