@@ -1,3 +1,6 @@
+branch:
+  include:
+  - poi
 notification:
   recipients:
   - recipient: '#channel-abc'
@@ -7,4 +10,5 @@ notification:
   - recipient: ""
     notifier: notifier-b
   message: xxx
-  condition: Failed
+  condition:
+  - Failed
