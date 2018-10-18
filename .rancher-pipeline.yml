@@ -8,5 +8,4 @@ notification:
   message: test message
   condition:
   - Success
-  - ""
   - Failed
