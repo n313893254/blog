@@ -5,7 +5,7 @@ notification:
   recipients:
   - recipient: sdfsdf
     notifier: c-8489k:n-sbm6t
-  message: xxx
+  message: test message
   condition:
   - Failed
   - Success
