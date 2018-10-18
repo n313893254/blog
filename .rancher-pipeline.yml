@@ -4,11 +4,7 @@ branch:
 notification:
   recipients:
   - recipient: '#channel-abc'
-    notifier: notifier-a
-  - recipient: '@somebody'
-    notifier: notifier-a
-  - recipient: ""
-    notifier: notifier-b
+    notifier: c-8489k:n-sbm6t
   message: xxx
   condition:
   - Failed
