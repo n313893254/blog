@@ -7,5 +7,6 @@ notification:
     notifier: c-8489k:n-sbm6t
   message: test message
   condition:
-  - Failed
   - Success
+  - ""
+  - Failed
