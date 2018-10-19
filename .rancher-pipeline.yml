@@ -3,7 +3,8 @@ branch:
   - poi
 notification:
   recipients:
-    - notifier: notifier-a
-      recipient: "#channel-abc"
-  condition: Failed
-  message: "xxx"
+  - recipient: sdf
+    notifier: c-k6h5w:n-4jr2h
+  message: xxx
+  condition:
+  - Failed
