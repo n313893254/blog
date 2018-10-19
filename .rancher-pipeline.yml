@@ -1,11 +1,3 @@
 branch:
   include:
   - poi
-notification:
-  recipients:
-  - recipient: sdfsdf
-    notifier: c-8489k:n-sbm6t
-  message: test message
-  condition:
-  - Changed
-  - Failed
