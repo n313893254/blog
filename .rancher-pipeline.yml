@@ -1,1 +1,8 @@
 branch: {}
+notification:
+  recipients:
+  - recipient: ""
+    notifier: ""
+  condition:
+  - Success
+  - Failed
