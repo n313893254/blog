@@ -1,5 +1,1 @@
 branch: {}
-notification:
-  recipients:
-  - recipient: ""
-    notifier: ""
