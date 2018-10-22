@@ -5,5 +5,3 @@ notification:
   recipients:
   - recipient: sdf
     notifier: c-k6h5w:n-4jr2h
-  condition:
-  - Changed
