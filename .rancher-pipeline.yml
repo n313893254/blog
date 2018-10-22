@@ -1,6 +1,4 @@
-branch:
-  include:
-  - poi
+branch: {}
 notification:
   recipients:
   - recipient: sdf
