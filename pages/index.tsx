@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import {getAllPosts, getPostBySlug} from '@/lib/api'
+import * as React from 'react'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
 
-export default function Home({allPosts}) {
-  console.log(allPosts, 'allPosts')
+import { getAllPosts } from '@/lib/api'
+
+export default function Home({ allPosts }): React.FunctionComponent {
   return allPosts.map(post => (
     <div key={post.slug}>
       <Link
@@ -18,7 +19,7 @@ export default function Home({allPosts}) {
   ))
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(): GetStaticProps {
   const allPosts = getAllPosts([
     'title',
     'data',
@@ -29,6 +30,6 @@ export async function getStaticProps() {
   ])
 
   return {
-    props: {allPosts},
+    props: { allPosts },
   }
 }

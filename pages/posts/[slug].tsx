@@ -1,7 +1,16 @@
+import * as React from 'react'
+
 import { getPostBySlug, getAllPosts } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
-export default function Post(props) {
+interface Props {
+  post: {
+    content: string,
+  }
+}
+
+export default function Post(props: Props): React.FunctionComponent {
   return (
     <div
       dangerouslySetInnerHTML={{ __html: props.post.content }}
@@ -9,7 +18,7 @@ export default function Post(props) {
   )
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }): GetStaticProps {
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
@@ -31,7 +40,7 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): GetStaticPaths {
   const posts = getAllPosts(['slug'])
 
   return {
