@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
+import { Button } from 'antd';
 
 import { getAllPosts } from '@/lib/api'
 
 export default function Home({ allPosts }): React.FunctionComponent {
-  return allPosts.map(post => (
+  const renderPosts = () => allPosts.map(post => (
     <div key={post.slug}>
       <Link
         as={`/posts/${post.slug}`}
@@ -17,6 +18,17 @@ export default function Home({ allPosts }): React.FunctionComponent {
       </Link>
     </div>
   ))
+
+  return (
+    <>
+      {renderPosts()}
+      <Button 
+        type="primary"
+      >
+        poi
+      </Button>
+    </>
+  )
 }
 
 export async function getStaticProps(): GetStaticProps {
