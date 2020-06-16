@@ -4,6 +4,10 @@ _class: lead
 paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.jpg')
+path: "/rancher-ui-traning.html"
+date: "2020-06-16T22:12:03.284Z"
+title: "Ranhcer-UI培训"
+tags: ["hello", "world"]
 ---
 
 <!-- ![bg left:40% 80%](https://raw.githubusercontent.com/marp-team/marp/master/marp.png) -->
