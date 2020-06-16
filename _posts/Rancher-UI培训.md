@@ -12,13 +12,13 @@ tags: ["hello", "world"]
 
 <!-- ![bg left:40% 80%](https://raw.githubusercontent.com/marp-team/marp/master/marp.png) -->
 
-# **数据流**
+## **数据流**
 
 ![Data flow (1)](https://user-images.githubusercontent.com/18737885/84357983-0d813780-abf9-11ea-887c-240dc15a20eb.png)
 
 ---
 
-# Collection
+## Collection
 
 - filters
 - sort
@@ -27,7 +27,8 @@ tags: ["hello", "world"]
 
 ---
 
-# Resource
+## Resource
+
 - id
 - type: 资源类型
 - links: 定义资源的CRUD和相关GET的链接，e.g. update, remove
@@ -35,14 +36,15 @@ tags: ["hello", "world"]
 
 ---
 
-# Model
+## Model
+
 - 原始资源定义在api-store, 提供了一些默认的方法: save, doAction, delelte.
 - 资源的扩展: computed
 - aciton-menu的定义
 
 ---
 
-# API Store
+## API Store
 
 - 基于axios发请求，可修改axios配置
 - find(type[, id, opt])
@@ -50,11 +52,11 @@ tags: ["hello", "world"]
 
 ---
 
-# 目录结构
+## 目录结构
 
 ---
 
-# Console
+## Console
 
 ![Shell](https://user-images.githubusercontent.com/18737885/84458897-a6b35b00-ac98-11ea-8ce4-c34b1d67528e.png)
 
@@ -62,6 +64,7 @@ tags: ["hello", "world"]
 
 - xterm
 - 建立连接
+
 ```js
 const scheme = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
 
@@ -75,7 +78,9 @@ command.forEach(c => {
 
 new WebSocket(url, 'base64.channel.k8s.io');
 ```
+
 - 输入命令
+
 ```js
 term.onData(data => {
   socket.send(`0${AWS.util.base64.encode(data)}`);
@@ -85,6 +90,7 @@ term.onData(data => {
 ---
 
 - 回显解码
+
 ```js
 socket.onmessage = message => {
   const data = message.data.slice(1);
@@ -108,13 +114,14 @@ socket.onmessage = message => {
 
 ---
 
-# Log
+## Log
 
 ![Log](https://user-images.githubusercontent.com/18737885/84460247-0e1eda00-ac9c-11ea-9441-36d52ba6d7a3.png)
 
 ---
 
 - 建立连接
+
 ```js
 const scheme = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
 
@@ -124,8 +131,10 @@ url += `?container=${encodeURIComponent(containerName)}&tailLines=500&follow=tru
 new WebSocket(url, 'base64.channel.k8s.io');
 ```
 
---- 
+---
+
 - 日志解码
+
 ```js
 socket.onmessage = message => {
   const data = AWS.util.base64.decode(message.data).toString();
@@ -156,9 +165,11 @@ socket.onmessage = message => {
   }
 };
 ```
+
 ---
 
 - 自动换行
+
 ```scss
 .wrap-lines {
   white-space: pre-wrap;
@@ -167,7 +178,9 @@ socket.onmessage = message => {
 ```
 
 ---
+
 - 自动下拉
+
 ```js
 const body = $('.log-body');
 let lastScrollTop = 0;
