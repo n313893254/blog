@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import { getPostBySlug, getAllPosts } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
+import Layout from '@/layouts/Layout'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 interface Props {
@@ -17,6 +18,8 @@ export default function Post(props: Props): React.FunctionComponent {
     />
   )
 }
+
+Post.Layout = Layout
 
 export async function getStaticProps({ params }): GetStaticProps {
   const post = getPostBySlug(params.slug, [

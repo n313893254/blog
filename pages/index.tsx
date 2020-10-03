@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
-import { Button } from 'antd';
 
 import { getAllPosts } from '@/lib/api'
+import Layout from '@/layouts/Layout'
 
 export default function Home({ allPosts }): React.FunctionComponent {
   const renderPosts = () => allPosts.map(post => (
@@ -22,14 +22,11 @@ export default function Home({ allPosts }): React.FunctionComponent {
   return (
     <>
       {renderPosts()}
-      <Button 
-        type="primary"
-      >
-        poi
-      </Button>
     </>
   )
 }
+
+Home.Layout = Layout
 
 export async function getStaticProps(): GetStaticProps {
   const allPosts = getAllPosts([
