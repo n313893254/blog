@@ -10,12 +10,12 @@ export default function Animates(props: Props): React.FunctionComponent {
   const renderCard = (animate) => {
     return (
       <Col 
-        span={6} 
+        span={4} 
         key={animate.title}
       >
         <Card
           hoverable
-          style={{ width: 240 }}
+          style={{ width: 150 }}
           cover={
             <img 
               src={animate.src}
